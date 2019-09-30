@@ -3,18 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		BF753EF02342A864000067D6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF753EEF2342A864000067D6 /* main.swift */; };
+		BF753EFB2342AD64000067D6 /* SwiftCLI in Frameworks */ = {isa = PBXBuildFile; productRef = BF753EFA2342AD64000067D6 /* SwiftCLI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		BF753EEA2342A864000067D6 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
+			dstPath = "";
 			dstSubfolderSpec = 0;
 			files = (
 			);
@@ -32,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF753EFB2342AD64000067D6 /* SwiftCLI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +74,16 @@
 				BF753EE82342A864000067D6 /* Sources */,
 				BF753EE92342A864000067D6 /* Frameworks */,
 				BF753EEA2342A864000067D6 /* CopyFiles */,
+				BF753EFD2342AECE000067D6 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = swifty;
+			packageProductDependencies = (
+				BF753EFA2342AD64000067D6 /* SwiftCLI */,
+			);
 			productName = swifty;
 			productReference = BF753EEC2342A864000067D6 /* swifty */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +112,9 @@
 				Base,
 			);
 			mainGroup = BF753EE32342A864000067D6;
+			packageReferences = (
+				BF753EF92342AD64000067D6 /* XCRemoteSwiftPackageReference "swiftcli" */,
+			);
 			productRefGroup = BF753EED2342A864000067D6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -114,6 +123,26 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BF753EFD2342AECE000067D6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd ${PROJECT_DIR}\nmkdir -vp release\n\ncd release\n\npkgDir=swifty-${CURRENT_PROJECT_VERSION}\nrm -rf ${pkgDir}\nmkdir ${pkgDir}\ncp ../DerivedData/swifty/Build/Products/Release/swifty ${pkgDir}\n\nchmod +x ${pkgDir}\nopen ${PROJECT_DIR}/release\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BF753EE82342A864000067D6 /* Sources */ = {
@@ -284,6 +313,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BF753EF92342AD64000067D6 /* XCRemoteSwiftPackageReference "swiftcli" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jakeheis/swiftcli";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BF753EFA2342AD64000067D6 /* SwiftCLI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF753EF92342AD64000067D6 /* XCRemoteSwiftPackageReference "swiftcli" */;
+			productName = SwiftCLI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BF753EE42342A864000067D6 /* Project object */;
 }
