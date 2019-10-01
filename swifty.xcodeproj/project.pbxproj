@@ -26,6 +26,7 @@
 /* Begin PBXFileReference section */
 		BF753EEC2342A864000067D6 /* swifty */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = swifty; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF753EEF2342A864000067D6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		BFDC87A623440B860012768E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +44,7 @@
 		BF753EE32342A864000067D6 = {
 			isa = PBXGroup;
 			children = (
+				BFDC87A923441B190012768E /* Resources */,
 				BF753EEE2342A864000067D6 /* swifty */,
 				BF753EED2342A864000067D6 /* Products */,
 			);
@@ -62,6 +64,14 @@
 				BF753EEF2342A864000067D6 /* main.swift */,
 			);
 			path = swifty;
+			sourceTree = "<group>";
+		};
+		BFDC87A923441B190012768E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BFDC87A623440B860012768E /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,10 +282,16 @@
 		BF753EF42342A864000067D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7MGU4K38T3;
 				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/swifty/Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 0.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = org.riley.swifty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -283,10 +299,16 @@
 		BF753EF52342A864000067D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7MGU4K38T3;
 				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/swifty/Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 0.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = org.riley.swifty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
