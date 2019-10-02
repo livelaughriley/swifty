@@ -17,7 +17,7 @@
                BlueprintIdentifier = "BF753EEB2342A864000067D6"
                BuildableName = "greeter"
                BlueprintName = "greeter"
-               ReferencedContainer = "container:swifty.xcodeproj">
+               ReferencedContainer = "container:greeter.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,7 +47,7 @@
             BlueprintIdentifier = "BF753EEB2342A864000067D6"
             BuildableName = "greeter"
             BlueprintName = "greeter"
-            ReferencedContainer = "container:swifty.xcodeproj">
+            ReferencedContainer = "container:greeter.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -64,7 +64,7 @@
             BlueprintIdentifier = "BF753EEB2342A864000067D6"
             BuildableName = "greeter"
             BlueprintName = "greeter"
-            ReferencedContainer = "container:swifty.xcodeproj">
+            ReferencedContainer = "container:greeter.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BF0F5F5723455BCE003C60EF /* greeter in CopyFiles */ = {isa = PBXBuildFile; fileRef = BF753EEC2342A864000067D6 /* greeter */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		BF5DA0A0234561DE00DEE9D3 /* SwiftCLI in Frameworks */ = {isa = PBXBuildFile; productRef = BF5DA09F234561DE00DEE9D3 /* SwiftCLI */; };
 		BF753EF02342A864000067D6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF753EEF2342A864000067D6 /* main.swift */; };
-		BF753EFB2342AD64000067D6 /* SwiftCLI in Frameworks */ = {isa = PBXBuildFile; productRef = BF753EFA2342AD64000067D6 /* SwiftCLI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,7 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		BF0F5F5823455CEA003C60EF /* Script.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Script.sh; sourceTree = "<group>"; };
+		BF0F5F5823455CEA003C60EF /* Script.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Script.sh; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.sh; };
 		BF753EEC2342A864000067D6 /* greeter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = greeter; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF753EEF2342A864000067D6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		BFDC87A623440B860012768E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF753EFB2342AD64000067D6 /* SwiftCLI in Frameworks */,
+				BF5DA0A0234561DE00DEE9D3 /* SwiftCLI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,7 +48,7 @@
 			isa = PBXGroup;
 			children = (
 				BFDC87A923441B190012768E /* Resources */,
-				BF753EEE2342A864000067D6 /* swifty */,
+				BF753EEE2342A864000067D6 /* greeter */,
 				BF753EED2342A864000067D6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,13 +61,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BF753EEE2342A864000067D6 /* swifty */ = {
+		BF753EEE2342A864000067D6 /* greeter */ = {
 			isa = PBXGroup;
 			children = (
 				BF753EEF2342A864000067D6 /* main.swift */,
 				BF0F5F5823455CEA003C60EF /* Script.sh */,
 			);
-			path = swifty;
+			path = greeter;
 			sourceTree = "<group>";
 		};
 		BFDC87A923441B190012768E /* Resources */ = {
@@ -88,6 +88,7 @@
 				BF753EE82342A864000067D6 /* Sources */,
 				BF753EE92342A864000067D6 /* Frameworks */,
 				BF753EEA2342A864000067D6 /* CopyFiles */,
+				BF6BB653234563CE000B6215 /* ShellScript */,
 				BF0F5F5A23455D54003C60EF /* ShellScript */,
 			);
 			buildRules = (
@@ -96,7 +97,7 @@
 			);
 			name = greeter;
 			packageProductDependencies = (
-				BF753EFA2342AD64000067D6 /* SwiftCLI */,
+				BF5DA09F234561DE00DEE9D3 /* SwiftCLI */,
 			);
 			productName = swifty;
 			productReference = BF753EEC2342A864000067D6 /* greeter */;
@@ -117,7 +118,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BF753EE72342A864000067D6 /* Build configuration list for PBXProject "swifty" */;
+			buildConfigurationList = BF753EE72342A864000067D6 /* Build configuration list for PBXProject "greeter" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -127,7 +128,7 @@
 			);
 			mainGroup = BF753EE32342A864000067D6;
 			packageReferences = (
-				BF753EF92342AD64000067D6 /* XCRemoteSwiftPackageReference "swiftcli" */,
+				BF5DA09E234561DE00DEE9D3 /* XCRemoteSwiftPackageReference "SwiftCLI" */,
 			);
 			productRefGroup = BF753EED2342A864000067D6 /* Products */;
 			projectDirPath = "";
@@ -154,7 +155,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/Users/riley/github/livelaughriley/swifty/swifty/Script.sh\n\n";
+			shellScript = "/Users/riley/github/livelaughriley/greeter/greeter/Script.sh\n\n";
+		};
+		BF6BB653234563CE000B6215 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -292,6 +310,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0.0.1;
 				DEVELOPMENT_TEAM = 7MGU4K38T3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
@@ -309,6 +328,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0.0.1;
 				DEVELOPMENT_TEAM = 7MGU4K38T3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
@@ -324,7 +344,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BF753EE72342A864000067D6 /* Build configuration list for PBXProject "swifty" */ = {
+		BF753EE72342A864000067D6 /* Build configuration list for PBXProject "greeter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF753EF12342A864000067D6 /* Debug */,
@@ -345,9 +365,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		BF753EF92342AD64000067D6 /* XCRemoteSwiftPackageReference "swiftcli" */ = {
+		BF5DA09E234561DE00DEE9D3 /* XCRemoteSwiftPackageReference "SwiftCLI" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jakeheis/swiftcli";
+			repositoryURL = "https://github.com/jakeheis/SwiftCLI.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 5.3.2;
@@ -356,9 +376,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BF753EFA2342AD64000067D6 /* SwiftCLI */ = {
+		BF5DA09F234561DE00DEE9D3 /* SwiftCLI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BF753EF92342AD64000067D6 /* XCRemoteSwiftPackageReference "swiftcli" */;
+			package = BF5DA09E234561DE00DEE9D3 /* XCRemoteSwiftPackageReference "SwiftCLI" */;
 			productName = SwiftCLI;
 		};
 /* End XCSwiftPackageProductDependency section */

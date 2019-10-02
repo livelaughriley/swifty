@@ -3,7 +3,7 @@
     "pins": [
       {
         "package": "SwiftCLI",
-        "repositoryURL": "https://github.com/jakeheis/swiftcli",
+        "repositoryURL": "https://github.com/jakeheis/SwiftCLI.git",
         "state": {
           "branch": null,
           "revision": "ba2268e67c07b9f9cfbc0801385e6238b36255eb",
