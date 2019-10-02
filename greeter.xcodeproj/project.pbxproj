@@ -65,7 +65,6 @@
 			isa = PBXGroup;
 			children = (
 				BF753EEF2342A864000067D6 /* main.swift */,
-				BF0F5F5823455CEA003C60EF /* Script.sh */,
 			);
 			path = greeter;
 			sourceTree = "<group>";
@@ -74,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				BFDC87A623440B860012768E /* Info.plist */,
+				BF0F5F5823455CEA003C60EF /* Script.sh */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -155,7 +155,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/Users/riley/github/livelaughriley/greeter/greeter/Script.sh\n\n";
+			shellScript = "/Users/riley/github/livelaughriley/greeter/Resources/Script.sh\n\n";
 		};
 		BF6BB653234563CE000B6215 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
