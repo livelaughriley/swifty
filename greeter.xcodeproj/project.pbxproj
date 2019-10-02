@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF0F5F5723455BCE003C60EF /* greeter in CopyFiles */ = {isa = PBXBuildFile; fileRef = BF753EEC2342A864000067D6 /* greeter */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		BF753EF02342A864000067D6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF753EEF2342A864000067D6 /* main.swift */; };
 		BF753EFB2342AD64000067D6 /* SwiftCLI in Frameworks */ = {isa = PBXBuildFile; productRef = BF753EFA2342AD64000067D6 /* SwiftCLI */; };
 /* End PBXBuildFile section */
@@ -14,17 +15,19 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		BF753EEA2342A864000067D6 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
+			buildActionMask = 12;
+			dstPath = /usr/local/bin;
 			dstSubfolderSpec = 0;
 			files = (
+				BF0F5F5723455BCE003C60EF /* greeter in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		BF753EEC2342A864000067D6 /* swifty */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = swifty; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF0F5F5823455CEA003C60EF /* Script.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Script.sh; sourceTree = "<group>"; };
+		BF753EEC2342A864000067D6 /* greeter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = greeter; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF753EEF2342A864000067D6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		BFDC87A623440B860012768E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,7 +56,7 @@
 		BF753EED2342A864000067D6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BF753EEC2342A864000067D6 /* swifty */,
+				BF753EEC2342A864000067D6 /* greeter */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				BF753EEF2342A864000067D6 /* main.swift */,
+				BF0F5F5823455CEA003C60EF /* Script.sh */,
 			);
 			path = swifty;
 			sourceTree = "<group>";
@@ -77,25 +81,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BF753EEB2342A864000067D6 /* swifty */ = {
+		BF753EEB2342A864000067D6 /* greeter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BF753EF32342A864000067D6 /* Build configuration list for PBXNativeTarget "swifty" */;
+			buildConfigurationList = BF753EF32342A864000067D6 /* Build configuration list for PBXNativeTarget "greeter" */;
 			buildPhases = (
 				BF753EE82342A864000067D6 /* Sources */,
 				BF753EE92342A864000067D6 /* Frameworks */,
 				BF753EEA2342A864000067D6 /* CopyFiles */,
-				BF753EFD2342AECE000067D6 /* ShellScript */,
+				BF0F5F5A23455D54003C60EF /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = swifty;
+			name = greeter;
 			packageProductDependencies = (
 				BF753EFA2342AD64000067D6 /* SwiftCLI */,
 			);
 			productName = swifty;
-			productReference = BF753EEC2342A864000067D6 /* swifty */;
+			productReference = BF753EEC2342A864000067D6 /* greeter */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -129,13 +133,13 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BF753EEB2342A864000067D6 /* swifty */,
+				BF753EEB2342A864000067D6 /* greeter */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		BF753EFD2342AECE000067D6 /* ShellScript */ = {
+		BF0F5F5A23455D54003C60EF /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -150,7 +154,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd ${PROJECT_DIR}\nmkdir -vp release\n\ncd release\n\npkgDir=swifty-${CURRENT_PROJECT_VERSION}\nrm -rf ${pkgDir}\nmkdir ${pkgDir}\ncp ../DerivedData/swifty/Build/Products/Release/swifty ${pkgDir}\n\nchmod +x ${pkgDir}\nopen ${PROJECT_DIR}/release\n";
+			shellScript = "/Users/riley/github/livelaughriley/swifty/swifty/Script.sh\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -200,6 +204,8 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 7MGU4K38T3;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -260,6 +266,8 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 7MGU4K38T3;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -286,7 +294,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7MGU4K38T3;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/swifty/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.riley.swifty;
@@ -303,7 +311,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7MGU4K38T3;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/swifty/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.riley.swifty;
@@ -325,7 +333,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BF753EF32342A864000067D6 /* Build configuration list for PBXNativeTarget "swifty" */ = {
+		BF753EF32342A864000067D6 /* Build configuration list for PBXNativeTarget "greeter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF753EF42342A864000067D6 /* Debug */,
