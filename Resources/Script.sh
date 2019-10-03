@@ -21,5 +21,5 @@ mkdir ${pkg_dir}
 cp -rp ${BUILT_PRODUCTS_DIR}/greeter ${pkg_dir}
 
 chmod +x ${pkg_dir}
-open ${PROJECT_DIR}/release/${pkg_dir}
+#open ${PROJECT_DIR}/release/${pkg_dir}
 
