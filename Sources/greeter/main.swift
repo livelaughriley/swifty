@@ -6,9 +6,6 @@
 //  Copyright © 2019 Riley Roach. All rights reserved.
 //
 
-//import Foundation
-
-//print("Hello, World!")
 
 import SwiftCLI
 
