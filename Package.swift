@@ -6,12 +6,12 @@ import PackageDescription
 let package = Package(
     name: "greeter",
     dependencies: [
-        .package(url: "https://github.com/jakeheis/SwiftCli", from: "5.3.0")
+        .package(url: "https://github.com/jakeheis/SwiftCLI.git", from: "5.3.0")
     ],
     targets: [
         .target(
             name: "greeter",
-            dependencies: []),
+            dependencies: ["SwiftCLI"]),
         .testTarget(
             name: "greeterTests",
             dependencies: ["greeter"]),
