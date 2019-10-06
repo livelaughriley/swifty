@@ -12,15 +12,15 @@ import SwiftCLI
 class GreetCommand: Command {
     let name: String = "greet"
     let shortDescription: String = "Say hello to <input>"
-    
+
     let person = Parameter()
-    
+
     let loud = Flag("-l", "--loud", description: "Say the greeting loudly")
     let quiet = Flag("-q", "--quiet", description: "Say the greeting quietly")
-    
+
     func execute() throws {
         let greeting = "Hello \(person.value)!"
-        
+
         if loud.value {
             stdout <<< greeting.uppercased()
         }
